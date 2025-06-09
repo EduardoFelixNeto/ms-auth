@@ -8,6 +8,9 @@ public class RegisterRequest {
     private String email;
     private String senha;
     private TipoUsuario tipo;
+    private String cep;
+    private String endereco;
+    private int pontos;
 
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
@@ -23,4 +26,10 @@ public class RegisterRequest {
 
     public TipoUsuario getTipo() { return tipo; }
     public void setTipo(TipoUsuario tipo) { this.tipo = tipo; }
+
+    public String getCep() { return cep; }
+    public void setCep(String cep) { this.cep = cep; }
+
+    public String getEndereco() { return endereco; }
+    public void setEndereco(String endereco) { this.endereco = endereco; }
 }

@@ -20,6 +20,12 @@ public class Usuario {
 
     private String senha;
 
+    private String cep;
+
+    private String endereco;
+
+    private int pontos;
+
     @Enumerated(EnumType.STRING)
     private TipoUsuario tipo;
 
@@ -41,6 +47,15 @@ public class Usuario {
     public TipoUsuario getTipo() { return tipo; }
     public void setTipo(TipoUsuario tipo) { this.tipo = tipo; }
 
+    public String getCep() { return cep; }
+    public void setCep(String cep) { this.cep = cep; }
+
+    public String getEndereco() { return endereco; }
+    public void setEndereco(String endereco) { this.endereco = endereco; }
+
+    public int getPontos() { return pontos; }
+    public void setPontos(int pontos) { this.pontos = pontos; }
+
     public static class Builder {
         private final Usuario u = new Usuario();
 
@@ -49,6 +64,9 @@ public class Usuario {
         public Builder email(String email) { u.setEmail(email); return this; }
         public Builder senha(String senha) { u.setSenha(senha); return this; }
         public Builder tipo(TipoUsuario tipo) { u.setTipo(tipo); return this; }
+        public Builder cep(String cep) { u.setCep(cep); return this; }
+        public Builder endereco(String endereco) { u.setEndereco(endereco); return this; }
+        public Builder pontos(int pontos) { u.setPontos(pontos); return this; }
         public Usuario build() { return u; }
     }
 

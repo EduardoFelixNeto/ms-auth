@@ -48,6 +48,9 @@ public class AuthController {
                     .email(req.getEmail())
                     .senha(hash + ":" + salt)
                     .tipo(req.getTipo())
+                    .cep(req.getCep())
+                    .endereco(req.getEndereco())
+                    .pontos(0)
                     .build();
 
             usuarioRepository.save(usuario);
