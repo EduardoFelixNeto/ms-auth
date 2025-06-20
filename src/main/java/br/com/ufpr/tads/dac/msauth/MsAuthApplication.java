@@ -2,11 +2,13 @@ package br.com.ufpr.tads.dac.msauth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @SpringBootApplication
+@EnableFeignClients
 public class MsAuthApplication {
 
     public static void main(String[] args) {
