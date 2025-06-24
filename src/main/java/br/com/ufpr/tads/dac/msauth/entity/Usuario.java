@@ -23,6 +23,17 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private TipoUsuario tipo;
 
+    @Column
+    private boolean ativo = true;
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
